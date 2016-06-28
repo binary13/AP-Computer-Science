@@ -1,4 +1,4 @@
-package Ch01;
+package ch01;
 
 /**
  * Created by justin on 6/28/16.
