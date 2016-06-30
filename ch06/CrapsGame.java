@@ -15,7 +15,7 @@ public class CrapsGame
   public int processRoll(int total)
   {
     int result = 0;
-    if (point == 0)
+    if (point == 0) // New game
     {
       if (total == 7 || total == 11) result = 1;
       else if (total == 2 || total == 3 || total == 12) result = -1;
@@ -24,7 +24,7 @@ public class CrapsGame
         point = total;
       }
     }
-    else
+    else // Not a new game - trying to roll point
     {
       if (total == point)
       {
@@ -37,7 +37,6 @@ public class CrapsGame
         point = 0;
       }
     }
-
 
     return result;
   }

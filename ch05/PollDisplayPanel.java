@@ -30,21 +30,18 @@ public class PollDisplayPanel extends JPanel
   // Increments count1
   public void vote1()
   {
-
     count1++;
   }
 
   // Increments count2
   public void vote2()
   {
-
     count2++;
   }
 
   // Increments count3
   public void vote3()
   {
-
     count3++;
   }
 
@@ -124,7 +121,7 @@ public class PollDisplayPanel extends JPanel
 
     g.drawString( count2 + "" , x, y);
 
-    g.drawString( count3 + "" , x + r, y);
+    g.drawString( Integer.toString(count3) , x + r, y);
 
 
     // Display the color squares:
@@ -142,7 +139,7 @@ public class PollDisplayPanel extends JPanel
   // corresponds to count / total, rounded to the nearest integer.
   private int countToDegrees(int count, int total)
   {
-    return Math.round(360 * count / total);
+    return (int) Math.round(360.0 * count / total); // Could also (int)(360.0*count/total + 0.5)
   }
 
   // Draws a sector, centered at x, y, of radius r,

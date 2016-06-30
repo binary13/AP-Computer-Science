@@ -2,7 +2,6 @@ package ch04;
 
 public class CircleTest
 {
-
   public static void main(String[] args)
   {
     Circle circle1 = new Circle(2);
@@ -18,6 +17,6 @@ public class CircleTest
     System.out.println("The radius of circle3 is " + circle3.getRadius());
     System.out.println("The area of circle3 is " + circle3.getArea() + "\n");
 
+    System.out.println(circle1.toString());
   }
-
 }
