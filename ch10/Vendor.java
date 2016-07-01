@@ -7,8 +7,9 @@ package ch10;
 public class Vendor
 {
   // Fields:
-  private int stock, price, deposit, change;
   private static double totalSales = 0;
+  private int stock, price, deposit, change;
+
 
   /**
    * Constructs a Vendor
@@ -21,6 +22,17 @@ public class Vendor
     this.stock = stock;
     this.deposit = 0;
     this.change = 0;
+  }
+
+  /**
+   * Returns and resets total sales since last service date
+   * @return total sales (double)
+   */
+  public static double getTotalSales()
+  {
+    double sales = totalSales;
+    totalSales = 0;
+    return sales;
   }
 
   /**
@@ -72,7 +84,7 @@ public class Vendor
   public boolean makeSale()
   {
     if(stock > 0 && deposit >= price){
-      stock -= 1;
+      stock--;
       change = deposit - price;
       deposit = 0;
       totalSales += price/100.0;
@@ -98,14 +110,5 @@ public class Vendor
     return number;
   }
 
-  /**
-   * Returns and resets total sales since last service date
-   * @return total sales (double)
-   */
-  public static double getTotalSales()
-  {
-    double sales = totalSales;
-    totalSales = 0;
-    return sales;
-  }
+
 }

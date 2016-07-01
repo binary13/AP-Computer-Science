@@ -76,6 +76,11 @@ public class VendingMachine extends JPanel
     vendor = new Vendor(price, FULL_STOCK);
   }
 
+  /**
+   * Pass-through function to get value of static variable
+   * totalSales from Vendor class
+   * @return Vendor.getTotalSales() (double)
+   */
   public static double getTotalSales()
   {
     return Vendor.getTotalSales();
