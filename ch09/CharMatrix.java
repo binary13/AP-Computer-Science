@@ -7,7 +7,7 @@ package ch09;
 public class CharMatrix
 {
   // Fields:
-  private char[][] matrix;
+  private char[][] grid;
 
 
   /**
@@ -16,9 +16,9 @@ public class CharMatrix
    */
   public CharMatrix(int rows, int cols)
   {
-    matrix = new char[rows][cols];
+    grid = new char[rows][cols];
 
-    for(char[] row : matrix)
+    for(char[] row : grid)
       for(char elem : row)
         elem = ' ';
   }
@@ -29,9 +29,9 @@ public class CharMatrix
    */
   public CharMatrix(int rows, int cols, char fill)
   {
-    matrix = new char[rows][cols];
+    grid = new char[rows][cols];
 
-    for(char[] row : matrix)
+    for(char[] row : grid)
       for(char elem : row)
         elem = fill;
   }
@@ -41,7 +41,7 @@ public class CharMatrix
    */
   public int numRows()
   {
-    return matrix.length;
+    return grid.length;
   }
 
   /**
@@ -49,7 +49,7 @@ public class CharMatrix
    */
   public int numCols()
   {
-    return matrix[0].length;
+    return grid[0].length;
   }
 
   /**
@@ -57,7 +57,7 @@ public class CharMatrix
    */
   public char charAt(int row, int col)
   {
-    return matrix[row][col];
+    return grid[row][col];
   }
 
   /**
@@ -65,7 +65,7 @@ public class CharMatrix
    */
   public void setCharAt(int row, int col, char ch)
   {
-    matrix[row][col] = ch;
+    grid[row][col] = ch;
   }
 
   /**
@@ -74,7 +74,7 @@ public class CharMatrix
    */
   public boolean isEmpty(int row, int col)
   {
-    return matrix[row][col] == ' ';
+    return grid[row][col] == ' ';
   }
 
   /**
@@ -86,7 +86,7 @@ public class CharMatrix
   {
     for(int row = row0; row <= row1; row++)
       for(int col = col0; col <= col1; col++)
-        matrix[row][col] = fill;
+        grid[row][col] = fill;
   }
 
   /**
@@ -98,7 +98,7 @@ public class CharMatrix
   {
     for(int row = row0; row <= row1; row++)
       for(int col = col0; col <= col1; col++)
-        matrix[row][col] = ' ';
+        grid[row][col] = ' ';
   }
 
   /**
@@ -109,7 +109,7 @@ public class CharMatrix
     int limit = numCols();
     int count = 0;
     for(int i = 0; i < limit; i++)
-      if(matrix[row][i] != ' ')
+      if(grid[row][i] != ' ')
         count++;
 
     return count;
@@ -123,7 +123,7 @@ public class CharMatrix
     int limit = numRows();
     int count = 0;
     for(int i = 0; i < limit; i++)
-      if(matrix[i][col] != ' ')
+      if(grid[i][col] != ' ')
         count++;
 
     return count;
