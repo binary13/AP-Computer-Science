@@ -1,4 +1,4 @@
-package ch09; /**
+package chomp; /**
  * A board game program with someone
  * playing against the computer
  */

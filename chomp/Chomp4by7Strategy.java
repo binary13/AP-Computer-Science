@@ -1,4 +1,4 @@
-package ch09;
+package chomp;
 
 /**
  * Implements Chomp strategy for a 4 by 7 board

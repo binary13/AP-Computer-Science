@@ -1,4 +1,4 @@
-package ch09; /**
+package chomp; /**
  * A board for the Chomp program
  */
 

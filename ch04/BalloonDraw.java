@@ -4,6 +4,8 @@ package ch04;
  * This drawing program helps create pictures with several
  * balloons (colored disks or other shapes)
  * Authors: Maria Litvin and Gary Litvin
+ *
+ *
  */
 
 import java.awt.Container;

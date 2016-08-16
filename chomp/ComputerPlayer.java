@@ -1,6 +1,8 @@
-package ch09; /**
+package chomp; /**
  * A computer player in a board game
  */
+
+import ch09.EasySound;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package ch09;
+package chomp;
 
 /**
  * Implements a 2-D array of characters
@@ -19,8 +19,8 @@ public class CharMatrix
     grid = new char[rows][cols];
 
     for(char[] row : grid)
-      for(char elem : row)
-        elem = ' ';
+      for(int c = 0; c < cols; c++)
+        row[c] = ' ';
   }
 
   /**
@@ -32,8 +32,8 @@ public class CharMatrix
     grid = new char[rows][cols];
 
     for(char[] row : grid)
-      for(char elem : row)
-        elem = fill;
+      for(int c = 0; c < cols; c++)
+        row[c] = fill;
   }
 
   /**
@@ -96,9 +96,7 @@ public class CharMatrix
    */
   public void clearRect(int row0, int col0, int row1, int col1)
   {
-    for(int row = row0; row <= row1; row++)
-      for(int col = col0; col <= col1; col++)
-        grid[row][col] = ' ';
+    fillRect(row0, col0, row1, col1, ' ');
   }
 
   /**
@@ -127,5 +125,19 @@ public class CharMatrix
         count++;
 
     return count;
+  }
+
+  /**
+   * Prints the grid
+   */
+  public String toString()
+  {
+    String s = "";
+
+    for (char[] row : grid)
+    {
+      s += new String(row) + "\n";
+    }
+    return s;
   }
 }

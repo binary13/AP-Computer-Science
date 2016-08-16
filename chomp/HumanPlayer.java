@@ -1,8 +1,7 @@
-package ch09; /**
+package chomp; /**
  * A human player in a board game
  */
 
-import java.awt.event.MouseListener;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 

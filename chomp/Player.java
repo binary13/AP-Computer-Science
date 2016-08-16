@@ -1,4 +1,4 @@
-package ch09;
+package chomp;
 
 /**
  * A player in a game
